@@ -11,7 +11,7 @@ import SwiftUI
 struct DataUSAVisualizationApp: App {
     var body: some Scene {
         WindowGroup {
-            UsaPopulationView()
+            MainTabView()
         }
     }
 }

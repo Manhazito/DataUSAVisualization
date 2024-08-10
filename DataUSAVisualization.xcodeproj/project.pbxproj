@@ -22,6 +22,10 @@
 		D4F2BBCC2C675785002D588F /* StateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBCB2C675785002D588F /* StateData.swift */; };
 		D4F2BBCE2C675B6D002D588F /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBCD2C675B6D002D588F /* ApiConstants.swift */; };
 		D4F2BBD02C675C04002D588F /* StateDataVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBCF2C675C04002D588F /* StateDataVM.swift */; };
+		D4F2BBD32C6765BC002D588F /* PopulationChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBD22C6765BC002D588F /* PopulationChart.swift */; };
+		D4F2BBD62C67665E002D588F /* StatesPopulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBD52C67665E002D588F /* StatesPopulationView.swift */; };
+		D4F2BBD92C677628002D588F /* StateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBD82C677628002D588F /* StateRow.swift */; };
+		D4F2BBDB2C677822002D588F /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBDA2C677822002D588F /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		D4F2BBCB2C675785002D588F /* StateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateData.swift; sourceTree = "<group>"; };
 		D4F2BBCD2C675B6D002D588F /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		D4F2BBCF2C675C04002D588F /* StateDataVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDataVM.swift; sourceTree = "<group>"; };
+		D4F2BBD22C6765BC002D588F /* PopulationChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationChart.swift; sourceTree = "<group>"; };
+		D4F2BBD52C67665E002D588F /* StatesPopulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesPopulationView.swift; sourceTree = "<group>"; };
+		D4F2BBD82C677628002D588F /* StateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRow.swift; sourceTree = "<group>"; };
+		D4F2BBDA2C677822002D588F /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +141,9 @@
 		D45781E22C66C31500B1363B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D4F2BBD42C676646002D588F /* StatesPopulationView */,
 				D45781E32C66C32100B1363B /* UsaPopulationView */,
+				D4F2BBDA2C677822002D588F /* MainTabView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -141,6 +151,7 @@
 		D45781E32C66C32100B1363B /* UsaPopulationView */ = {
 			isa = PBXGroup;
 			children = (
+				D4F2BBD12C67650B002D588F /* Views */,
 				D43EBCA02C66C19F0077D96B /* UsaPopulationView.swift */,
 			);
 			path = UsaPopulationView;
@@ -205,6 +216,31 @@
 				D4F2BBCB2C675785002D588F /* StateData.swift */,
 			);
 			path = StateData;
+			sourceTree = "<group>";
+		};
+		D4F2BBD12C67650B002D588F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4F2BBD22C6765BC002D588F /* PopulationChart.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4F2BBD42C676646002D588F /* StatesPopulationView */ = {
+			isa = PBXGroup;
+			children = (
+				D4F2BBD72C677620002D588F /* View */,
+				D4F2BBD52C67665E002D588F /* StatesPopulationView.swift */,
+			);
+			path = StatesPopulationView;
+			sourceTree = "<group>";
+		};
+		D4F2BBD72C677620002D588F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4F2BBD82C677628002D588F /* StateRow.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,15 +346,19 @@
 				D4F2BBCE2C675B6D002D588F /* ApiConstants.swift in Sources */,
 				D4F2BBCA2C675771002D588F /* StateDataContainer.swift in Sources */,
 				D45781F12C66C9AE00B1363B /* NationalDataVM.swift in Sources */,
+				D4F2BBDB2C677822002D588F /* MainTabView.swift in Sources */,
 				D45781EF2C66C98B00B1363B /* NationalData.swift in Sources */,
 				D45781ED2C66C97800B1363B /* NationalDataContainer.swift in Sources */,
 				D43EBCA12C66C19F0077D96B /* UsaPopulationView.swift in Sources */,
 				D4F2BBCC2C675785002D588F /* StateData.swift in Sources */,
+				D4F2BBD92C677628002D588F /* StateRow.swift in Sources */,
+				D4F2BBD62C67665E002D588F /* StatesPopulationView.swift in Sources */,
 				D4F2BBC62C66DC9E002D588F /* ActivityIndicatorView.swift in Sources */,
 				D45781EB2C66C96000B1363B /* NetworkError.swift in Sources */,
 				D43EBC9F2C66C19F0077D96B /* DataUSAVisualizationApp.swift in Sources */,
 				D4F2BBD02C675C04002D588F /* StateDataVM.swift in Sources */,
 				D45781E82C66C38500B1363B /* DataUsaService.swift in Sources */,
+				D4F2BBD32C6765BC002D588F /* PopulationChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

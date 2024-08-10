@@ -7,20 +7,18 @@
 
 import Foundation
 
-struct StateData: Decodable {
-    let state: String
+struct StateData: Decodable, Identifiable {
+    let id: String
+    let name: String
     let year: String
     let population: Int
+    
+    var relativePopulation: Double = 1.0
 
     private enum CodingKeys : String, CodingKey {
-        case state = "State"
+        case id = "Slug State"
+        case name = "State"
         case year = "Year"
         case population = "Population"
-    }
-}
-
-extension StateData {
-    var yearDate: Date? {
-        Calendar.current.date(from: DateComponents(year: Int(year)))
     }
 }
