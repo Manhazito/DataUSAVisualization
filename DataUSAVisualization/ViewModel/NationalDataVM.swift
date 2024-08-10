@@ -14,6 +14,12 @@ final class NationalDataVM {
     let service: DataUsaService
     
     var loading = true
+    var showDialog = false
+    var error: NetworkError = .unknownError {
+        didSet {
+            showDialog = true
+        }
+    }
     var nationalData = [NationalData]()
     
     init(service: DataUsaService) {
@@ -31,8 +37,7 @@ final class NationalDataVM {
 
             nationalData = Array(data.prefix(10))
         } catch {
-            #warning("Show error dialog")
-            print(error)
+            self.error = error as? NetworkError ?? .unknownError
         }
     }
 }

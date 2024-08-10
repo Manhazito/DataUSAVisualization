@@ -35,6 +35,11 @@ struct UsaPopulationView: View {
                 .scrollIndicators(.hidden)
                 .padding()
                 .navigationTitle(screenTitle)
+                .overlay {
+                    DialogView(show: $vm.showDialog,
+                               title: vm.error.title,
+                               message: vm.error.description)
+                }
             }
         }
         .task {

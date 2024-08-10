@@ -13,3 +13,22 @@ enum NetworkError: Error {
     case decodingError
     case unknownError
 }
+
+extension NetworkError {
+    var title: String {
+        "Something went wrong"
+    }
+    
+    var description: String {
+        switch self {
+        case .badUrl:
+            "The url provided is not valid."
+        case .badResponse:
+            "Check your internet connection."
+        case .decodingError:
+            "The response from the server is not valid."
+        case .unknownError:
+            "Please try again later."
+        }
+    }
+}

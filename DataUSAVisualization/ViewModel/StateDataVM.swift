@@ -19,6 +19,12 @@ final class StateDataVM {
     let service: DataUsaService
     
     var loading = true
+    var showDialog = false
+    var error: NetworkError = .unknownError {
+        didSet {
+            showDialog = true
+        }
+    }
     var sortOrder: SortOrder = .alphabetically {
         didSet {
             sortData()
@@ -43,8 +49,7 @@ final class StateDataVM {
             calculateRelativePopulations()
             sortData()
         } catch {
-            #warning("Show error dialog")
-            print(error)
+            self.error = error as? NetworkError ?? .unknownError
         }
     }
     

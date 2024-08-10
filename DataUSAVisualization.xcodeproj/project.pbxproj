@@ -26,6 +26,7 @@
 		D4F2BBD62C67665E002D588F /* StatesPopulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBD52C67665E002D588F /* StatesPopulationView.swift */; };
 		D4F2BBD92C677628002D588F /* StateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBD82C677628002D588F /* StateRow.swift */; };
 		D4F2BBDB2C677822002D588F /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBDA2C677822002D588F /* MainTabView.swift */; };
+		D4F2BBDF2C677F00002D588F /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBDE2C677F00002D588F /* DialogView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		D4F2BBD52C67665E002D588F /* StatesPopulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesPopulationView.swift; sourceTree = "<group>"; };
 		D4F2BBD82C677628002D588F /* StateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRow.swift; sourceTree = "<group>"; };
 		D4F2BBDA2C677822002D588F /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		D4F2BBDE2C677F00002D588F /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				D45781E12C66C28900B1363B /* App */,
 				D45781E22C66C31500B1363B /* Screens */,
+				D4F2BBDC2C677EE7002D588F /* Views */,
 				D45781E42C66C35C00B1363B /* ViewModel */,
 				D45781E62C66C36800B1363B /* Service */,
 				D45781E52C66C36300B1363B /* Model */,
@@ -243,6 +246,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D4F2BBDC2C677EE7002D588F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4F2BBDD2C677EF2002D588F /* Dialog */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4F2BBDD2C677EF2002D588F /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				D4F2BBDE2C677F00002D588F /* DialogView.swift */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,6 +366,7 @@
 				D4F2BBCA2C675771002D588F /* StateDataContainer.swift in Sources */,
 				D45781F12C66C9AE00B1363B /* NationalDataVM.swift in Sources */,
 				D4F2BBDB2C677822002D588F /* MainTabView.swift in Sources */,
+				D4F2BBDF2C677F00002D588F /* DialogView.swift in Sources */,
 				D45781EF2C66C98B00B1363B /* NationalData.swift in Sources */,
 				D45781ED2C66C97800B1363B /* NationalDataContainer.swift in Sources */,
 				D43EBCA12C66C19F0077D96B /* UsaPopulationView.swift in Sources */,

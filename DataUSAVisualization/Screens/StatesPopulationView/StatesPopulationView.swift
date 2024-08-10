@@ -33,6 +33,11 @@ struct StatesPopulationView: View {
                         }
                     }
                     .scrollIndicators(.hidden)
+                    .overlay {
+                        DialogView(show: $vm.showDialog,
+                                   title: vm.error.title,
+                                   message: vm.error.description)
+                    }
                 }
             }
             .navigationTitle(screenTitle)
