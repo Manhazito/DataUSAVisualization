@@ -20,6 +20,7 @@
 		D4F2BBC62C66DC9E002D588F /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBC52C66DC9E002D588F /* ActivityIndicatorView.swift */; };
 		D4F2BBCA2C675771002D588F /* StateDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBC92C675771002D588F /* StateDataContainer.swift */; };
 		D4F2BBCC2C675785002D588F /* StateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBCB2C675785002D588F /* StateData.swift */; };
+		D4F2BBCE2C675B6D002D588F /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBCD2C675B6D002D588F /* ApiConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		D4F2BBC52C66DC9E002D588F /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		D4F2BBC92C675771002D588F /* StateDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDataContainer.swift; sourceTree = "<group>"; };
 		D4F2BBCB2C675785002D588F /* StateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateData.swift; sourceTree = "<group>"; };
+		D4F2BBCD2C675B6D002D588F /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				D45781EA2C66C96000B1363B /* NetworkError.swift */,
+				D4F2BBCD2C675B6D002D588F /* ApiConstants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4F2BBCE2C675B6D002D588F /* ApiConstants.swift in Sources */,
 				D4F2BBCA2C675771002D588F /* StateDataContainer.swift in Sources */,
 				D45781F12C66C9AE00B1363B /* NationalDataVM.swift in Sources */,
 				D45781EF2C66C98B00B1363B /* NationalData.swift in Sources */,
