@@ -21,6 +21,7 @@
 		D4F2BBCA2C675771002D588F /* StateDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBC92C675771002D588F /* StateDataContainer.swift */; };
 		D4F2BBCC2C675785002D588F /* StateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBCB2C675785002D588F /* StateData.swift */; };
 		D4F2BBCE2C675B6D002D588F /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBCD2C675B6D002D588F /* ApiConstants.swift */; };
+		D4F2BBD02C675C04002D588F /* StateDataVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2BBCF2C675C04002D588F /* StateDataVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		D4F2BBC92C675771002D588F /* StateDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDataContainer.swift; sourceTree = "<group>"; };
 		D4F2BBCB2C675785002D588F /* StateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateData.swift; sourceTree = "<group>"; };
 		D4F2BBCD2C675B6D002D588F /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		D4F2BBCF2C675C04002D588F /* StateDataVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDataVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				D45781F02C66C9AE00B1363B /* NationalDataVM.swift */,
+				D4F2BBCF2C675C04002D588F /* StateDataVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				D4F2BBC62C66DC9E002D588F /* ActivityIndicatorView.swift in Sources */,
 				D45781EB2C66C96000B1363B /* NetworkError.swift in Sources */,
 				D43EBC9F2C66C19F0077D96B /* DataUSAVisualizationApp.swift in Sources */,
+				D4F2BBD02C675C04002D588F /* StateDataVM.swift in Sources */,
 				D45781E82C66C38500B1363B /* DataUsaService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
