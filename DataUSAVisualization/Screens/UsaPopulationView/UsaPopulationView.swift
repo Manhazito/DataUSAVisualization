@@ -9,7 +9,7 @@ import SwiftUI
 import Charts
 
 struct UsaPopulationView: View {
-    @State private var vm = PopulationVM(service: DataUsaService())
+    @State private var vm = NationalDataVM(service: DataUsaService())
     
     var body: some View {
         NavigationStack {
@@ -24,10 +24,10 @@ struct UsaPopulationView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
                     GroupBox {
-                        Chart(vm.population, id: \.year) { population in
+                        Chart(vm.nationalData, id: \.year) { data in
                             LineMark(
-                                x: .value("Date", population.yearDate ?? Date(), unit: .year),
-                                y: .value("Population", population.population)
+                                x: .value("Date", data.yearDate ?? Date(), unit: .year),
+                                y: .value("Population", data.population)
                             )
                         }
                         .foregroundStyle(.green)
@@ -37,7 +37,7 @@ struct UsaPopulationView: View {
                     .padding(.vertical, 24)
                     .backgroundStyle(.green.opacity(0.1))
                     
-                    if let currentPopulation = vm.population.last?.population {
+                    if let currentPopulation = vm.nationalData.last?.population {
                         Text("Actual population: \(currentPopulation).")
                     }
                     

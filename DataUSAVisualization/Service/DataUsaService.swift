@@ -8,7 +8,7 @@
 import Foundation
 
 struct DataUsaService {
-    func getNationPopulation() async throws -> [Population] {
+    func getNationPopulation() async throws -> [NationalData] {
         let urlStr = "https://datausa.io/api/data?drilldowns=Nation&measures=Population"
         guard let url = URL(string: urlStr) else { throw NetworkError.badUrl}
         
@@ -17,10 +17,14 @@ struct DataUsaService {
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { throw NetworkError.badResponse }
         
         do {
-            let populationData = try JSONDecoder().decode(PopulationData.self, from: data)
-            return populationData.data
+            let nationalDataContainer = try JSONDecoder().decode(NationalDataContainer.self, from: data)
+            return nationalDataContainer.data
         } catch {
             throw NetworkError.decodingError
         }
+    }
+    
+    func getStatePopulation() async throws -> [NationalData] {
+        []
     }
 }

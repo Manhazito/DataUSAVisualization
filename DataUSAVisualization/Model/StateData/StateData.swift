@@ -1,25 +1,25 @@
 //
-//  Population.swift
+//  StateData.swift
 //  DataUSAVisualization
 //
-//  Created by Filipe Ramos on 09/08/2024.
+//  Created by Filipe Ramos on 10/08/2024.
 //
 
 import Foundation
 
-struct Population: Decodable {
-    let nation: String
+struct StateData: Decodable {
+    let state: String
     let year: String
     let population: Int
 
     private enum CodingKeys : String, CodingKey {
-        case nation = "Nation"
+        case state = "State"
         case year = "Year"
         case population = "Population"
     }
 }
 
-extension Population {
+extension StateData {
     var yearDate: Date? {
         Calendar.current.date(from: DateComponents(year: Int(year)))
     }
