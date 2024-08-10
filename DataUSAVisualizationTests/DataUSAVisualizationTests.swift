@@ -9,28 +9,80 @@ import XCTest
 @testable import DataUSAVisualization
 
 final class DataUSAVisualizationTests: XCTestCase {
-
+    
+    var vm: StateDataVM?
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let service = DataUsaService()
+        vm = StateDataVM(service: service)
+    }
+    
+    func testRelativeCalculation_Success() throws {
+        vm?.stateData = dummyStateData
+        vm?.calculateRelativePopulations()
+        
+        XCTAssertEqual(vm?.stateData.first?.relativePopulation, 0.5)
+    }
+    
+    func testRelativeCalculation_Fail() throws {
+        vm?.stateData = dummyStateData
+        vm?.calculateRelativePopulations()
+        
+        XCTAssertNotEqual(vm?.stateData.last?.relativePopulation, 20)
+    }
+    
+    func testSortAlpha_Success() throws {
+        vm?.stateData = dummyStateData
+        vm?.sortData()
+        
+        XCTAssertEqual(vm?.stateData.first?.name, "AAA")
+    }
+    
+    func testSortAlpha_Fail() throws {
+        vm?.stateData = dummyStateData
+        vm?.sortData()
+        
+        XCTAssertNotEqual(vm?.stateData.last?.name, "AAA")
+    }
+    
+    func testSortSize_Success() throws {
+        vm?.stateData = dummyStateData
+        vm?.sortOrder = .populationSize
+        vm?.sortData()
+        
+        XCTAssertEqual(vm?.stateData.first?.population, 200)
+    }
+    
+    func testSortSize_Fail() throws {
+        vm?.stateData = dummyStateData
+        vm?.sortOrder = .populationSize
+        vm?.sortData()
+        
+        XCTAssertNotEqual(vm?.stateData.last?.population, 200)
+    }
+    
+    func testSwitchSort_Success() throws {
+        vm?.stateData = dummyStateData
+        vm?.switchSortingOrder()
+        
+        XCTAssertEqual(vm?.sortOrder, .populationSize)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testSwitchSort_Fail() throws {
+        vm?.stateData = dummyStateData
+        vm?.switchSortingOrder()
+        
+        XCTAssertNotEqual(vm?.sortOrder, .alphabetically)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+}
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+extension DataUSAVisualizationTests {
+    var dummyStateData: [StateData] {
+        [
+            .init(id: "1", name: "AAA", year: "2024", population: 100),
+            .init(id: "2", name: "BBB", year: "2024", population: 10),
+            .init(id: "3", name: "CCC", year: "2024", population: 200)
+        ]
     }
-
 }
